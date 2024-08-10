@@ -1,0 +1,88 @@
+4. How can you manipulate strings in JavaScript? Provide examples of common methods.
+=> In JavaScript, strings are immutable sequences of characters, meaning that once a string is created, it cannot be changed. 
+However, you can manipulate strings using various methods that return new strings based on the original. 
+
+Here are some common string manipulation methods along with examples:-
+
+1.Length of a String
+    You can find the length of a string using the .length property.
+    Examples:-
+
+        let myString = "Hello, World!";
+        console.log(myString.length); // 13
+
+2.Accessing Characters
+    You can access individual characters in a string using bracket notation.
+    Examples:-
+
+        let myString = "Hello";
+        console.log(myString[0]); // "H"
+        console.log(myString.charAt(1)); // "e"
+
+3.Changing Case
+    You can change the case of a string using .toUpperCase() and .toLowerCase().
+    Examples:-
+
+        let myString = "Hello, World!";
+        console.log(myString.toUpperCase()); // "HELLO, WORLD!"
+        console.log(myString.toLowerCase()); // "hello, world!"
+
+4.Finding Substrings
+    You can find the position of a substring using .indexOf() and .lastIndexOf().
+    Examples:-
+
+        let myString = "Hello, World!";
+        console.log(myString.indexOf("World")); // 7
+        console.log(myString.lastIndexOf("o")); // 8
+
+5. Extracting Substrings
+    You can extract parts of a string using .slice(), .substring(), or .substr().
+    Examples:-
+
+        let myString = "Hello, World!";
+        console.log(myString.slice(0, 5)); // "Hello"
+        console.log(myString.substring(7, 12)); // "World"
+        console.log(myString.substr(7, 5)); // "World"
+
+6.Replacing Substrings
+    You can replace parts of a string using .replace().
+    Examples:-
+
+        let myString = "Hello, World!";
+        let newString = myString.replace("World", "JavaScript");
+        console.log(newString); // "Hello, JavaScript!"
+
+7.Splitting Strings
+    You can split a string into an array of substrings using .split().
+    Examples:-
+
+        let myString = "Hello, World!";
+        let words = myString.split(", ");
+        console.log(words); // ["Hello", "World!"]
+
+8.Trimming Whitespace
+    You can remove whitespace from the beginning and end of a string using .trim().
+    Examples:-
+
+        let myString = "   Hello, World!   ";
+        console.log(myString.trim()); // "Hello, World!"
+
+9.Concatenating Strings
+    You can concatenate strings using the + operator or .concat() method.
+    Examples:-
+
+        let str1 = "Hello";
+        let str2 = "World";
+        let combined = str1 + ", " + str2 + "!"; // Using +
+        console.log(combined); // "Hello, World!"
+
+        let combinedWithConcat = str1.concat(", ", str2, "!"); // Using concat()
+        console.log(combinedWithConcat); // "Hello, World!"
+
+10. Template Literals
+    You can create multi-line strings and embed expressions using template literals (backticks).
+    Examples:-
+
+        let name = "Alice";
+        let greeting = Hello, ${name}!;
+        console.log(greeting); // "Hello, Alice!"

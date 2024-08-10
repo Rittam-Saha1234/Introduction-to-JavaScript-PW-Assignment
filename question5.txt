@@ -1,0 +1,49 @@
+1. What are the differences and similarities between null and undefined in JavaScript?
+=> In JavaScript, both null and undefined are primitive values that represent the absence of a value or a non-existent value. 
+However, they have distinct meanings and uses. 
+
+Here are the key differences and similarities:
+
+    Differences:-
+
+        1. Definition:
+               - undefined: This is the default value of a variable that has been declared but not assigned any value. 
+               It indicates that a variable exists but has not been initialized.
+               - null: This is an intentional assignment that represents the absence of any object value. 
+               It is often used to indicate that a variable should be empty or has no value.
+
+        2. Type:
+                - undefined: The type of undefined is "undefined".
+                    console.log(typeof undefined); // "undefined"
+     
+                - null: The type of null is "object" (this is considered a historical bug in JavaScript).
+                    console.log(typeof null); // "object"
+     
+
+        3. Usage:
+                - undefined: Generally used by JavaScript itself to indicate that a variable has not been assigned a value or a function does not return a value.
+                - null: Used by developers to explicitly indicate that a variable should be empty or intentionally set to have no value.
+
+        4. Comparison:
+                - Using == (loose equality), null and undefined are considered equal.
+                        console.log(null == undefined); // true
+                    
+                - Using === (strict equality), they are not equal because they are of different types.
+                        console.log(null === undefined); // false
+                    
+
+    Similarities:-
+
+        1. Falsiness:
+            - Both null and undefined are falsy values, meaning they evaluate to false in a boolean context.
+                    if (!null) {
+                    console.log("null is falsy"); // This will execute
+                }
+                if (!undefined) {
+                    console.log("undefined is falsy"); // This will execute
+                }
+     
+
+        2. Absence of Value:
+           - Both represent the absence of a meaningful value, but in different contexts (undefined for uninitialized variables and null for intentional emptiness).
+

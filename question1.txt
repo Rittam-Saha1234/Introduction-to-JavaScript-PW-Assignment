@@ -1,0 +1,53 @@
+1. Compare var,let and const in javascript. When would you use each?
+=> In JavaScript, 'var','let' and 'const' are used to declare variables, but they differ in their behavior and use cases.
+
+1.Scope:-
+    * var
+        ->Function Scoped: var is scoped to the function in which it is declared. If declared outside a function, it becomes global.
+        ->It ignores block scope, meaning it does not recognize {} blocks (like in loops or conditionals) as its scope.
+
+    *let
+        ->Block Scoped: let is block-scoped, meaning it is confined within the nearest pair of {} (e.g., within a loop, condition, or function).
+
+    *const
+        ->Block Scoped: Like let, const is block-scoped.
+
+2.Hoisting:-
+    *var
+        ->Hoisted: Variables declared with var are hoisted to the top of their scope, but their initialization stays in place. This means they are accessible before their declaration with an undefined value.
+
+    *let
+        ->Hoisted: Variables declared with let are also hoisted, but they remain in a "temporal dead zone" from the start of the block until the declaration is encountered, preventing them from being accessed before their declaration.
+
+    *const
+        ->Hoisted: Like let, const variables are hoisted but remain in the "temporal dead zone" until the declaration.
+
+3.Re-declaration:-
+    *var
+        ->Allowed: You can re-declare a variable using var within the same scope without error.
+
+    *let
+        ->Not Allowed: Re-declaring a let variable in the same scope will throw an error.
+
+    *const
+        ->Not Allowed: Like let, re-declaring a const variable in the same scope will throw an error.
+
+4.Re-assignment:-
+    *var
+        ->Allowed: Variables declared with var can be re-assigned new values.
+
+    *let
+        ->Allowed: Variables declared with let can be re-assigned new values.
+
+    *const
+        ->Not Allowed: Variables declared with const cannot be re-assigned. They must be initialized at the time of declaration and cannot be changed afterward.
+
+5.When to Use Each:-
+    *var
+        ->Use var in legacy code or when dealing with function-scoped variables, but it's generally better to use let or const due to their predictable scoping behavior.
+
+    *let
+        ->Use let when you need a variable that will change its value over time (e.g., in loops, conditionals, or when re-assigning values is necessary).
+
+    *const
+        ->Use const for variables that should not change their value after being initialized. This is ideal for constants, configuration values, and any variable that should remain immutable.
